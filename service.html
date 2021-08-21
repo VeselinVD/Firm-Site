@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Firm Site</title>
+    <link
+      rel="stylesheet"
+      href="/fontawesome-free-5.15.2-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="utilities.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- navbar  -->
+    <div class="navbar">
+      <div class="container flex">
+        <a href="index.html"><h1 class="logo">CLI</h1></a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="docs.html">Docs</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Head  -->
+    <section class="docs-head bg-primary py-3">
+      <div class="container grid">
+        <div>
+          <h1 class="xl">Docs</h1>
+          <p class="lead">Learn how to work with the platform</p>
+        </div>
+        <img src="img/docs.png" alt="" />
+      </div>
+    </section>
+
+    <!-- Docs main  -->
+    <section class="docs-main my-4">
+      <div class="container grid">
+        <div class="card bg-light p-3">
+          <h3 class="my-2">Essentials</h3>
+          <nav>
+            <ul>
+              <li><a href="docs.html">Introduction</a></li>
+              <li><a class="text-primary" href="service.html">Services</a></li>
+              <li><a href="installation.html">Installation</a></li>
+            </ul>
+          </nav>
+          <h3 class="my-2">Build & Deploy</h3>
+          <nav>
+            <ul>
+              <li><a href="build.html">Build </a></li>
+              <li><a href="deploy.html">Deploy</a></li>
+              <li><a href="usage.html">Usage</a></li>
+              <li><a href="configuration.html">Configuration</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="card">
+          <h2>Services</h2>
+          <p>
+            Service containers are configured by the
+            <code>services.yaml</code> file.
+          </p>
+          <p>
+            There may be zero or more Service containers in a cluster, depending
+            on the <code>services.yaml</code> file. The code for a Service is
+            provided by CLI in a pre-built container image, along with a default
+            configuration. Depending on the service it may also include
+            user-provided configuration in the <code>services.yaml</code> file.
+            Examples of services include MySQL/MariaDB, Elasticsearch, Redis,
+            and RabbitMQ.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer  -->
+    <footer class="footer bg-dark py-5">
+      <div class="container grid grid-3">
+        <div>
+          <h1>CLI</h1>
+          <p>Copyright &copy; 2020</p>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="docs.html">Docs</a></li>
+          </ul>
+        </nav>
+        <div class="social">
+          <a href="https://github.com"
+          ><img src="https://img.icons8.com/bubbles/100/000000/github.png"
+        /></a>
+        <a href="https://www.facebook.com"
+          ><img
+            src="https://img.icons8.com/bubbles/100/000000/facebook-new.png"
+        /></a>
+        <a href="https://www.instagram.com"
+          ><img
+            src="https://img.icons8.com/bubbles/100/000000/instagram-new.png"
+        /></a>
+        <a href="twitter.com"
+          ><img src="https://img.icons8.com/bubbles/100/000000/twitter.png"
+        /></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

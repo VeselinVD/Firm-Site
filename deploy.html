@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Firm Site</title>
+    <link
+      rel="stylesheet"
+      href="/fontawesome-free-5.15.2-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="utilities.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- navbar  -->
+    <div class="navbar">
+      <div class="container flex">
+        <a href="index.html"><h1 class="logo">CLI</h1></a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="docs.html">Docs</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Head  -->
+    <section class="docs-head bg-primary py-3">
+      <div class="container grid">
+        <div>
+          <h1 class="xl">Docs</h1>
+          <p class="lead">Learn how to work with the platform</p>
+        </div>
+        <img src="img/docs.png" alt="" />
+      </div>
+    </section>
+
+    <!-- Docs main  -->
+    <section class="docs-main my-4">
+      <div class="container grid">
+        <div class="card bg-light p-3">
+          <h3 class="my-2">Essentials</h3>
+          <nav>
+            <ul>
+              <li><a href="docs.html">Introduction</a></li>
+              <li><a href="service.html">Services</a></li>
+              <li><a href="installation.html">Installation</a></li>
+            </ul>
+          </nav>
+          <h3 class="my-2">Build & Deploy</h3>
+          <nav>
+            <ul>
+              <li><a href="build.html">Build </a></li>
+              <li><a class="text-primary" href="deploy.html">Deploy</a></li>
+              <li><a href="usage.html">Usage</a></li>
+              <li><a href="configuration.html">Configuration</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="card">
+          <h2>Deploying the application</h2>
+          <p>
+            Deploying the application also has several steps, although they’re
+            much quicker.
+          </p>
+          <p>
+            First, we pause all incoming requests and hold them so that there’s
+            no interruption of service. Then we disconnect the current
+            containers from their file system mounts, if any, and connect the
+            file systems to the new containers instead. If it’s a new branch and
+            there is no existing file system, we clone it from the parent
+            branch.
+          </p>
+          <p>
+            We then open networking connections between the various containers,
+            but only those that were specified in the configuration files (using
+            the <code>relationships</code> key). No configuration, no
+            connection. That helps with security, as only those connections that
+            are actually needed even exist. The connection information for each
+            service is available in an application as environment variables.
+          </p>
+          <p>
+            Now that we have working, running containers there are two more
+            steps to run. First, if there is a “start” command specified in your
+            <code>.cli/app.yaml</code> file to start the application, we run
+            that. (With PHP, this is optional.)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer  -->
+    <footer class="footer bg-dark py-5">
+      <div class="container grid grid-3">
+        <div>
+          <h1>CLI</h1>
+          <p>Copyright &copy; 2020</p>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="docs.html">Docs</a></li>
+          </ul>
+        </nav>
+        <div class="social">
+          <a href="https://github.com"
+          ><img src="https://img.icons8.com/bubbles/100/000000/github.png"
+        /></a>
+        <a href="https://www.facebook.com"
+          ><img
+            src="https://img.icons8.com/bubbles/100/000000/facebook-new.png"
+        /></a>
+        <a href="https://www.instagram.com"
+          ><img
+            src="https://img.icons8.com/bubbles/100/000000/instagram-new.png"
+        /></a>
+        <a href="twitter.com"
+          ><img src="https://img.icons8.com/bubbles/100/000000/twitter.png"
+        /></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

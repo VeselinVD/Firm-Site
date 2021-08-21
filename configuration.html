@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Firm Site</title>
+    <link
+      rel="stylesheet"
+      href="/fontawesome-free-5.15.2-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="utilities.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- navbar  -->
+    <div class="navbar">
+      <div class="container flex">
+        <a href="index.html"><h1 class="logo">CLI</h1></a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="docs.html">Docs</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Head  -->
+    <section class="docs-head bg-primary py-3">
+      <div class="container grid">
+        <div>
+          <h1 class="xl">Docs</h1>
+          <p class="lead">Learn how to work with the platform</p>
+        </div>
+        <img src="img/docs.png" alt="" />
+      </div>
+    </section>
+
+    <!-- Docs main  -->
+    <section class="docs-main my-4">
+      <div class="container grid">
+        <div class="card bg-light p-3">
+          <h3 class="my-2">Essentials</h3>
+          <nav>
+            <ul>
+              <li><a href="docs.html">Introduction</a></li>
+              <li><a href="service.html">Services</a></li>
+              <li><a href="installation.html">Installation</a></li>
+            </ul>
+          </nav>
+          <h3 class="my-2">Build & Deploy</h3>
+          <nav>
+            <ul>
+              <li><a href="build.html">Build </a></li>
+              <li><a href="deploy.html">Deploy</a></li>
+              <li><a href="usage.html">Usage</a></li>
+              <li>
+                <a class="text-primary" href="configuration.html"
+                  >Configuration</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="card">
+          <h2>Configuration</h2>
+          <p>
+            A few applications, unfortunately, require configuration values to
+            be specified in a static, non-executable file (such as a
+            <code>.ini</code>, <code>.xml</code> or <code>.yaml</code> file) and
+            do not support reading from environment variables. These files
+            cannot be populated at build time as environment-specific values are
+            not available, but cannot be written to in deploy as the file system
+            is read only. That is a design flaw in the application, and you
+            should file a bug with the application or framework author.
+          </p>
+          <p>
+            A possible workaround is to symlink the file to a writeable
+            location, then use a deploy hook script to write files out to that
+            file. The details of this process will vary by the application, but
+            an outline of this process is shown below.
+          </p>
+          <p>
+            First, create a non-web-accessible mount point in your
+            <code>.cli.app.yaml</code> file
+          </p>
+          <p>
+            Second, create a symbolic link from the config file the application
+            wants to a location in that mount.
+          </p>
+          <p>
+            Third, configure a script that will read from the environment
+            configuration and write out <code>config/db.yaml</code>. That script
+            will run from the <code>deploy</code> hook, and can be written in
+            whatever language you prefer.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer  -->
+    <footer class="footer bg-dark py-5">
+      <div class="container grid grid-3">
+        <div>
+          <h1>CLI</h1>
+          <p>Copyright &copy; 2020</p>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="docs.html">Docs</a></li>
+          </ul>
+        </nav>
+        <div class="social">
+          <a href="https://github.com"
+          ><img src="https://img.icons8.com/bubbles/100/000000/github.png"
+        /></a>
+        <a href="https://www.facebook.com"
+          ><img
+            src="https://img.icons8.com/bubbles/100/000000/facebook-new.png"
+        /></a>
+        <a href="https://www.instagram.com"
+          ><img
+            src="https://img.icons8.com/bubbles/100/000000/instagram-new.png"
+        /></a>
+        <a href="twitter.com"
+          ><img src="https://img.icons8.com/bubbles/100/000000/twitter.png"
+        /></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
